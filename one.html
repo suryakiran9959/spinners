@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            border-color: black;
+            background-color: black; /* Set the background color to black */
+        }
+
+        #load {
+            position: absolute;
+            width: 600px;  /* Width remains the same */
+            height:100px; /* Set the height to 200px */
+            left: 50%;
+            top: 40%;
+            margin-left: -300px; /* Adjust margin for centering */
+            overflow: visible;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: default;
+        }
+
+        #load div {
+            position: absolute;
+            width: 20px;
+            height: 36px;
+            opacity: 0;
+            font-family: Helvetica, Arial, sans-serif;
+            animation: move 2s linear infinite;
+            -o-animation: move 2s linear infinite;
+            -moz-animation: move 2s linear infinite;
+            -webkit-animation: move 2s linear infinite;
+            transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            color: #35C4F0; /* Text color */
+        }
+
+        /* Animation delays for each letter */
+        #load div:nth-child(2) { animation-delay: 0.2s; }
+        #load div:nth-child(3) { animation-delay: 0.4s; }
+        #load div:nth-child(4) { animation-delay: 0.6s; }
+        #load div:nth-child(5) { animation-delay: 0.8s; }
+        #load div:nth-child(6) { animation-delay: 1s; }
+        #load div:nth-child(7) { animation-delay: 1.2s; }
+
+        @keyframes move {
+            0% { left: 0; opacity: 0; }
+            35% { left: 41%; transform: rotate(0deg); opacity: 1; }
+            65% { left: 59%; transform: rotate(0deg); opacity: 1; }
+            100% { left: 100%; transform: rotate(-180deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div id="load">
+        <div>G</div>
+        <div>N</div>
+        <div>I</div>
+        <div>D</div>
+        <div>A</div>
+        <div>O</div>
+        <div>L</div>
+    </div>
+</body>
+</html>
